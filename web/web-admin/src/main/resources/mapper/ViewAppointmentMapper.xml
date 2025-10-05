@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pzj.lease.web.admin.mapper.ViewAppointmentMapper">
+
+
+    <resultMap id="AppointmentVoMap" type="com.pzj.lease.web.admin.vo.appointment.AppointmentVo">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="name" column="name"/>
+        <result property="phone" column="phone"/>
+        <result property="apartmentId" column="apartment_id"/>
+        <result property="appointmentTime" column="appointment_time"/>
+        <result property="additionalInfo" column="additional_info"/>
+        <result property="appointmentStatus" column="appointment_status"/>
+        <association property="apartmentInfo" javaType="com.pzj.lease.model.entity.ApartmentInfo">
+            <id property="id" column="ai_apartment_id"/>
+            <result property="introduction" column="introduction"/>
+            <result property="name" column="apartment_name"/>
+            <result property="districtId" column="district_id"/>
+            <result property="districtName" column="district_name"/>
+            <result property="cityId" column="city_id"/>
+            <result property="cityName" column="city_name"/>
+            <result property="provinceId" column="province_id"/>
+            <result property="provinceName" column="province_name"/>
+            <result property="addressDetail" column="address_detail"/>
+            <result property="latitude" column="latitude"/>
+            <result property="longitude" column="longitude"/>
+            <result property="phone" column="apartment_phone"/>
+            <result property="isRelease" column="is_release"/>
+
+        </association>
+    </resultMap>
+
+
+    <select id="getPageByQuery" resultMap="AppointmentVoMap">
+        select va.id,
+               va.user_id,
+               va.name,
+               va.phone,
+               va.apartment_id,
+               va.appointment_time,
+               va.additional_info,
+               va.appointment_status,
+               ai.id ai_apartment_id,
+               ai.name apartment_name,
+               ai.introduction,
+               ai.district_id,
+               ai.district_name,
+               ai.city_id,
+               ai.city_name,
+               ai.province_id,
+               ai.province_name,
+               ai.address_detail,
+               ai.latitude,
+               ai.longitude,
+               ai.phone apartment_phone,
+               ai.is_release
+        from view_appointment va
+                 left join apartment_info ai
+                           on ai.is_deleted = 0
+                               and ai.id = va.apartment_id
+        <where>
+            va.is_deleted=0
+        <if test="queryVo.provinceId !=null">
+            and ai.province_id=#{queryVo.provinceId}
+        </if>
+        <if test="queryVo.cityId!=null">
+            and ai.city_id=#{queryVo.cityId}
+        </if>
+        <if test="queryVo.districtId!=null">
+            and ai.district_id=#{queryVo.districtId}
+        </if>
+        <if test="queryVo.apartmentId!=null">
+            and va.apartment_id=#{queryVo.apartmentId}
+        </if>
+        <if test="queryVo.name!=null">
+            and ai.name=#{queryVo.name}
+        </if>
+        <if test="queryVo.phone!=null">
+            and ai.phone=#{queryVo.phone}
+        </if>
+        </where>
+    </select>
+</mapper>

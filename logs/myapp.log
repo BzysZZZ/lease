@@ -1,0 +1,270 @@
+2025-10-06T00:11:23.661+08:00  INFO 26736 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 21.0.8 with PID 26736 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:11:23.666+08:00 DEBUG 26736 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:11:23.667+08:00  INFO 26736 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:11:24.309+08:00  WARN 26736 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'mybatisPlusInterceptor' defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.pzj.lease.common.mybatisplus.MyBatisPlusConfiguration$MPConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]] for bean 'mybatisPlusInterceptor' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=mybatisPlusConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class]] bound.
+2025-10-06T00:11:24.322+08:00  INFO 26736 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-06T00:11:24.343+08:00 ERROR 26736 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'mybatisPlusInterceptor', defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-10-06T00:11:53.072+08:00  INFO 26032 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 21.0.8 with PID 26032 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:11:53.073+08:00 DEBUG 26032 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:11:53.073+08:00  INFO 26032 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:11:53.619+08:00  WARN 26032 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'mybatisPlusInterceptor' defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.pzj.lease.common.mybatisplus.MyBatisPlusConfiguration$MPConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]] for bean 'mybatisPlusInterceptor' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=mybatisPlusConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class]] bound.
+2025-10-06T00:11:53.631+08:00  INFO 26032 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-06T00:11:53.648+08:00 ERROR 26032 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'mybatisPlusInterceptor', defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-10-06T00:15:28.234+08:00  INFO 27896 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 17.0.16 with PID 27896 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:15:28.236+08:00 DEBUG 27896 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:15:28.237+08:00  INFO 27896 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:15:28.714+08:00  WARN 27896 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'mybatisPlusInterceptor' defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.pzj.lease.common.mybatisplus.MyBatisPlusConfiguration$MPConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]] for bean 'mybatisPlusInterceptor' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=mybatisPlusConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class]] bound.
+2025-10-06T00:15:28.720+08:00  INFO 27896 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-06T00:15:28.735+08:00 ERROR 27896 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'mybatisPlusInterceptor', defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-10-06T00:17:07.475+08:00  INFO 28604 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 21.0.8 with PID 28604 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:17:07.476+08:00 DEBUG 28604 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:17:07.477+08:00  INFO 28604 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:17:08.108+08:00  WARN 28604 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'mybatisPlusInterceptor' defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.pzj.lease.common.mybatisplus.MyBatisPlusConfiguration$MPConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class]] for bean 'mybatisPlusInterceptor' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=mybatisPlusConfiguration; factoryMethodName=mybatisPlusInterceptor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class]] bound.
+2025-10-06T00:17:08.118+08:00  INFO 28604 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-06T00:17:08.136+08:00 ERROR 28604 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'mybatisPlusInterceptor', defined in class path resource [com/pzj/lease/common/mybatisplus/MyBatisPlusConfiguration$MPConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/pzj/lease/common/config/MybatisPlusConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-10-06T00:18:15.141+08:00  INFO 7220 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 21.0.8 with PID 7220 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:18:15.143+08:00 DEBUG 7220 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:18:15.143+08:00  INFO 7220 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:18:15.893+08:00  INFO 7220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-06T00:18:15.896+08:00  INFO 7220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-06T00:18:15.949+08:00  INFO 7220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 Redis repository interfaceinterfaces.
+2025-10-06T00:18:16.668+08:00  INFO 7220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-10-06T00:18:16.677+08:00  INFO 7220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T00:18:16.677+08:00  INFO 7220 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-06T00:18:16.818+08:00  INFO 7220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T00:18:16.818+08:00  INFO 7220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1639 ms
+2025-10-06T00:18:38.197+08:00  WARN 7220 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileUploadConsumer': Unsatisfied dependency expressed through field 'fileService': Error creating bean with name 'fileServiceImpl': Invocation of init method failed
+2025-10-06T00:18:38.199+08:00  INFO 7220 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-06T00:18:38.211+08:00  INFO 7220 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-06T00:18:38.229+08:00 ERROR 7220 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileUploadConsumer': Unsatisfied dependency expressed through field 'fileService': Error creating bean with name 'fileServiceImpl': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:771) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:751) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.13.jar:3.0.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) ~[spring-boot-3.0.13.jar:3.0.13]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) ~[spring-boot-3.0.13.jar:3.0.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) ~[spring-boot-3.0.13.jar:3.0.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-3.0.13.jar:3.0.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-3.0.13.jar:3.0.13]
+	at com.pzj.lease.AdminWebApplication.main(AdminWebApplication.java:11) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileServiceImpl': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.0.14.jar:6.0.14]
+	... 20 common frames omitted
+Caused by: java.net.ConnectException: Failed to connect to /192.168.199.100:9000
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154) ~[okhttp-4.10.0.jar:na]
+	at io.minio.S3Base.execute(S3Base.java:529) ~[minio-8.2.0.jar:8.2.0]
+	at io.minio.S3Base.getRegion(S3Base.java:691) ~[minio-8.2.0.jar:8.2.0]
+	at io.minio.S3Base.execute(S3Base.java:464) ~[minio-8.2.0.jar:8.2.0]
+	at io.minio.S3Base.executeHead(S3Base.java:725) ~[minio-8.2.0.jar:8.2.0]
+	at io.minio.MinioClient.bucketExists(MinioClient.java:1135) ~[minio-8.2.0.jar:8.2.0]
+	at com.pzj.lease.web.admin.service.impl.FileServiceImpl.initBucket(FileServiceImpl.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.0.14.jar:6.0.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.0.14.jar:6.0.14]
+	... 32 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128) ~[okhttp-4.10.0.jar:na]
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295) ~[okhttp-4.10.0.jar:na]
+	... 58 common frames omitted
+
+2025-10-06T00:20:07.979+08:00  INFO 16040 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 21.0.8 with PID 16040 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:20:07.980+08:00 DEBUG 16040 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:20:07.981+08:00  INFO 16040 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:20:08.785+08:00  INFO 16040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-06T00:20:08.787+08:00  INFO 16040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-06T00:20:08.833+08:00  INFO 16040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaceinterfaces.
+2025-10-06T00:20:09.522+08:00  INFO 16040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-10-06T00:20:09.532+08:00  INFO 16040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T00:20:09.532+08:00  INFO 16040 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-06T00:20:09.685+08:00  INFO 16040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T00:20:09.685+08:00  INFO 16040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1666 ms
+2025-10-06T00:20:11.233+08:00  WARN 16040 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileUploadController': Unsatisfied dependency expressed through field 'rocketMQTemplate': No qualifying bean of type 'org.apache.rocketmq.spring.core.RocketMQTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-10-06T00:20:11.238+08:00  INFO 16040 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-06T00:20:11.254+08:00  INFO 16040 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-06T00:20:11.295+08:00 ERROR 16040 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field rocketMQTemplate in com.pzj.lease.web.admin.controller.apartment.FileUploadController required a bean of type 'org.apache.rocketmq.spring.core.RocketMQTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.rocketmq.spring.core.RocketMQTemplate' in your configuration.
+
+2025-10-06T00:39:08.477+08:00  INFO 16264 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 21.0.8 with PID 16264 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:39:08.488+08:00 DEBUG 16264 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:39:08.489+08:00  INFO 16264 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:39:09.269+08:00  INFO 16264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-06T00:39:09.272+08:00  INFO 16264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-06T00:39:09.322+08:00  INFO 16264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 Redis repository interfaceinterfaces.
+2025-10-06T00:39:09.928+08:00  INFO 16264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-10-06T00:39:09.938+08:00  INFO 16264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T00:39:09.938+08:00  INFO 16264 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-06T00:39:10.083+08:00  INFO 16264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T00:39:10.083+08:00  INFO 16264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1556 ms
+2025-10-06T00:39:11.457+08:00  WARN 16264 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileUploadController': Unsatisfied dependency expressed through field 'rocketMQTemplate': No qualifying bean of type 'org.apache.rocketmq.spring.core.RocketMQTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-10-06T00:39:11.462+08:00  INFO 16264 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-06T00:39:11.478+08:00  INFO 16264 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-06T00:39:11.515+08:00 ERROR 16264 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field rocketMQTemplate in com.pzj.lease.web.admin.controller.apartment.FileUploadController required a bean of type 'org.apache.rocketmq.spring.core.RocketMQTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.rocketmq.spring.core.RocketMQTemplate' in your configuration.
+
+2025-10-06T00:54:03.711+08:00  INFO 17724 --- [main] com.pzj.lease.AdminWebApplication        : Starting AdminWebApplication using Java 21.0.8 with PID 17724 (D:\javaCode\lease\web\web-admin\target\classes started by 27631 in D:\javaCode\lease)
+2025-10-06T00:54:03.712+08:00 DEBUG 17724 --- [main] com.pzj.lease.AdminWebApplication        : Running with Spring Boot v3.0.13, Spring v6.0.14
+2025-10-06T00:54:03.713+08:00  INFO 17724 --- [main] com.pzj.lease.AdminWebApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T00:54:04.481+08:00  INFO 17724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-06T00:54:04.485+08:00  INFO 17724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-06T00:54:04.537+08:00  INFO 17724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaceinterfaces.
+2025-10-06T00:54:05.181+08:00  INFO 17724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-10-06T00:54:05.190+08:00  INFO 17724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T00:54:05.191+08:00  INFO 17724 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-06T00:54:05.331+08:00  INFO 17724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T00:54:05.332+08:00  INFO 17724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1581 ms
+2025-10-06T00:54:08.985+08:00  INFO 17724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-10-06T00:54:08.998+08:00  INFO 17724 --- [main] com.pzj.lease.AdminWebApplication        : Started AdminWebApplication in 5.67 seconds (process running for 6.16)
+2025-10-06T00:54:16.184+08:00  INFO 17724 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-06T00:54:16.184+08:00  INFO 17724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-06T00:54:16.185+08:00  INFO 17724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-06T00:54:16.954+08:00  INFO 17724 --- [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 436 ms
+2025-10-06T00:54:24.190+08:00 DEBUG 17724 --- [http-nio-8080-exec-4] c.p.l.w.a.i.AuthenticationInterceptor    : Token校验开始 - 时间戳：1759683264190ms，请求路径：/admin/facility/list
+2025-10-06T00:54:24.227+08:00 DEBUG 17724 --- [http-nio-8080-exec-4] c.p.l.w.a.i.AuthenticationInterceptor    : Token解析耗时：37ms，解析结果 - userId：2，userName：null
+2025-10-06T00:54:24.228+08:00 DEBUG 17724 --- [http-nio-8080-exec-4] c.p.l.w.a.i.AuthenticationInterceptor    : Token校验结束 - 时间戳：1759683264228ms，总耗时：38ms
+2025-10-06T00:54:24.275+08:00  INFO 17724 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-10-06T00:54:24.790+08:00  INFO 17724 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@59f1d03b
+2025-10-06T00:54:24.792+08:00  INFO 17724 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.

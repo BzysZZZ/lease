@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pzj.lease.web.admin.mapper.LeaseAgreementMapper">
+
+
+    <resultMap id="LeaseMap" type="com.pzj.lease.web.admin.vo.agreement.AgreementVo">
+        <id property="id" column="id"/>
+        <result property="phone" column="phone"/>
+        <result property="name" column="name"/>
+        <result property="identificationNumber" column="identification_number"/>
+        <result property="apartmentId" column="apartmentId"/>
+        <result property="roomId" column="room_id"/>
+        <result property="leaseStartDate" column="lease_start_date"/>
+        <result property="leaseEndDate" column="lease_end_date"/>
+        <result property="leaseTermId" column="lease_term_id"/>
+        <result property="rent" column="rent"/>
+        <result property="deposit" column="deposit"/>
+        <result property="paymentTypeId" column="payment_type_id"/>
+        <result property="status" column="status"/>
+        <result property="sourceType" column="source_type"/>
+        <result property="additionalInfo" column="additional_info"/>
+        <association property="apartmentInfo" javaType="com.pzj.lease.model.entity.ApartmentInfo">
+            <id property="id" column="apartment_id"/>
+            <result property="name" column="apartment_name"/>
+            <result property="introduction" column="introduction"/>
+            <result property="districtId" column="district_id"/>
+            <result property="districtName" column="district_name"/>
+            <result property="cityId" column="city_id"/>
+            <result property="cityName" column="city_name"/>
+            <result property="provinceId" column="province_id"/>
+            <result property="provinceName" column="province_name"/>
+            <result property="addressDetail" column="address_detail"/>
+            <result property="latitude" column="latitude"/>
+            <result property="longitude" column="longitude"/>
+            <result property="phone" column="apartment_phone"/>
+            <result property="isRelease" column="apartment_is_release"/>
+        </association>
+        <association property="roomInfo" javaType="com.pzj.lease.model.entity.RoomInfo">
+            <id property="id" column="room_info_id"/>
+            <result property="roomNumber" column="room_number"/>
+            <result property="rent" column="rent"/>
+            <result property="apartmentId" column="apartment_id"/>
+            <result property="isRelease" column="room_is_release"/>
+        </association>
+        <association property="paymentType" javaType="com.pzj.lease.model.entity.PaymentType">
+            <id property="id" column="payment_type_id"/>
+            <result property="name" column="pt_name"/>
+            <result property="payMonthCount" column="pay_month_count"/>
+            <result property="additionalInfo" column="pt_info"/>
+        </association>
+        <association property="leaseTerm" javaType="com.pzj.lease.model.entity.LeaseTerm">
+            <id property="id" column="lt_id"/>
+            <result property="monthCount" column="month_count"/>
+            <result property="unit" column="unit"/>
+        </association>
+    </resultMap>
+    <select id="getPage" resultMap="LeaseMap">
+        SELECT la.id,
+               la.phone,
+               la.name,
+               la.identification_number,
+               la.apartment_id,
+               la.room_id,
+               la.lease_start_date,
+               la.lease_end_date,
+               la.lease_term_id,
+               la.rent,
+               la.deposit,
+               la.payment_type_id,
+               la.status,
+               la.source_type,
+               la.additional_info,
+               ri.id room_info_id,
+               room_number,
+               ri.is_release room_is_release,
+               ai.name apartment_name,
+               pay_month_count,
+               pt.name pt_name,
+               pt.additional_info pt_info,
+               introduction,
+               district_id,
+               district_name,
+               city_id,
+               city_name,
+               province_id,
+               province_name,
+               address_detail,
+               latitude,
+               ai.phone apartment_phone,
+               longitude,
+               ai.is_release apartment_is_release,
+               lt.id lt_id,
+               month_count,
+               unit
+        FROM lease_agreement la
+                 LEFT JOIN apartment_info ai
+                           ON ai.is_deleted = 0
+                               AND ai.id = la.apartment_id
+                 LEFT JOIN room_info ri
+                           ON ri.is_deleted = 0
+                               AND ri.id = la.room_id
+                 LEFT JOIN room_payment_type rpt
+                           ON rpt.is_deleted = 0
+                               AND rpt.room_id = la.room_id
+                 LEFT JOIN payment_type pt
+                           ON pt.id = rpt.payment_type_id
+                               AND pt.is_deleted = 0
+                 LEFT JOIN room_lease_term rlt
+                           ON rlt.is_deleted = 0
+                               AND rlt.room_id = la.room_id
+                 LEFT JOIN lease_term lt
+                           ON lt.is_deleted = 0
+                               AND rlt.lease_term_id = lt.id
+        <where>
+            la.is_deleted=0
+            <if test="queryVo.provinceId!=null">
+                AND ai.province_id=#{queryVo.provinceId}
+            </if>
+            <if test="queryVo.cityId!=null">
+                AND ai.city_id=#{queryVo.cityId}
+            </if>
+            <if test="queryVo.districtId!=null">
+                AND ai.district_id=#{queryVo.districtId}
+            </if>
+            <if test="queryVo.apartmentId!=null">
+                AND la.apartment_id=#{queryVo.apartmentId}
+            </if>
+            <if test="queryVo.roomNumber!=null">
+                AND ri.room_number=#{queryVo.roomNumber}
+            </if>
+            <if test="queryVo.name!=null">
+                AND la.name=#{queryVo.name}
+            </if>
+            <if test="queryVo.phone!=null">
+                AND la.phone=#{queryVo.phone}
+            </if>
+        </where>
+    </select>
+</mapper>

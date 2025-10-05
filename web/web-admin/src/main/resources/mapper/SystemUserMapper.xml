@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pzj.lease.web.admin.mapper.SystemUserMapper">
+
+    <select id="getUserPage" resultType="com.pzj.lease.web.admin.vo.system.user.SystemUserItemVo">
+        SELECT su.id,
+               su.username,
+               su.password,
+               su.name,
+               su.type,
+               su.phone,
+               su.avatar_url,
+               su.additional_info,
+               su.post_id,
+               su.status,
+               sp.name post_name
+        FROM system_user su
+        LEFT JOIN system_post sp
+        ON sp.is_deleted=0
+        AND sp.id=post_id
+        <where>
+            su.is_deleted=0
+            <if test="queryVo.name!=null">
+                AND name = #{queryVo.name}
+            </if>
+            <if test="queryVo.phone!=null">
+                AND phone = #{queryVo.phone}
+            </if>
+        </where>
+    </select>
+    <select id="selectOneByUsername" resultType="com.pzj.lease.model.entity.SystemUser">
+        select id,
+               username,
+               password,
+               name,
+               type,
+               phone,
+               avatar_url,
+               additional_info,
+               post_id,
+               status
+        from system_user
+        where is_deleted=0
+        and username=#{username}
+    </select>
+</mapper>

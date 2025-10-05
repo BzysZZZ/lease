@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianlou.app.mapper.BrowsingHistoryMapper">
+
+    <resultMap id="historyItemVoMap" type="com.qianlou.app.vo.history.HistoryItemVo" autoMapping="true">
+        <id property="id" column="id"/>
+        <result property="roomId" column="room_id"/>
+        <collection property="roomGraphVoList" ofType="com.qianlou.app.vo.graph.GraphVo"
+                    select="selectGraphListByRoomId" column="room_id" autoMapping="true">
+        </collection>
+    </resultMap>
+
+    <select id="pageItem" resultMap="historyItemVoMap">
+        select bh.id,
+               bh.browse_time,
+               bh.user_id,
+               ri.id   room_id,
+               ri.room_number,
+               ri.rent,
+               ai.name apartment_name,
+               ai.province_name,
+               ai.city_name,
+               ai.district_name
+        from browsing_history bh
+                 left join room_info ri on bh.room_id = ri.id
+                 left join apartment_info ai on ri.apartment_id = ai.id
+        where bh.is_deleted = 0
+          and bh.user_id = #{userId}
+        order by bh.browse_time desc
+    </select>
+
+    <select id="selectGraphListByRoomId" resultType="com.qianlou.app.vo.graph.GraphVo">
+        select name,
+               url
+        from graph_info
+        where is_deleted = 0
+          and item_type = 2
+          and item_id = #{room_id}
+    </select>
+
+
+    <!--注意:room_id字段需要显式的映射两次-->
+    <resultMap id="HistoryItemVoMap" type="com.qianlou.app.vo.history.HistoryItemVo" autoMapping="true">
+        <id property="id" column="id"/>
+        <result property="roomId" column="room_id"/>
+        <collection property="roomGraphVoList" ofType="com.qianlou.app.vo.graph.GraphVo"
+                    select="listGraphVoByRoomId"
+                    column="room_id" autoMapping="true"/>
+    </resultMap>
+
+    <select id="pageHistoryItemByUserId" resultMap="HistoryItemVoMap">
+        select bh.id,
+               bh.user_id,
+               bh.room_id,
+               bh.browse_time,
+               ri.room_number,
+               ri.rent,
+               ai.name apartment_name,
+               ai.province_name,
+               ai.city_name,
+               ai.district_name
+        from browsing_history bh
+                 left join room_info ri on bh.room_id = ri.id
+                 left join apartment_info ai on ri.apartment_id = ai.id
+        where bh.is_deleted = 0
+        order by bh.browse_time desc
+    </select>
+
+    <select id="listGraphVoByRoomId" resultType="com.qianlou.app.vo.graph.GraphVo">
+        select name,
+               url
+        from graph_info
+        where is_deleted = 0
+          and item_type = ${@com.atguigu.lease.model.enums.ItemType@ROOM.getCode()}
+          and item_id = #{room_id}
+    </select>
+</mapper>

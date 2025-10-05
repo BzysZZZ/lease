@@ -1,0 +1,54 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource  # 数据库连接池类型
+    url: jdbc:mysql://192.168.199.100:3306/lease?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
+    username: root
+    password: Password.123
+    hikari:
+      connection-test-query: SELECT 1 # 自动检测连接
+      connection-timeout: 60000 # 数据库连接超时时间：30秒
+      idle-timeout: 500000  # 空闲连接存活最大时间：10分钟
+      max-lifetime: 540000  # 池中连接的最长生命周期，30分钟
+      maximum-pool-size: 50 # 最大连接数
+      minimum-idle: 10  # 最小空闲连接数量
+      pool-name: SPHHikariPool  # 连接池名称
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  data:
+    redis:
+      host: 192.168.199.100
+      port: 6379
+      database: 0
+
+rocketmq:
+  name-server: 192.168.199.100:9876
+  producer:
+    group: file-upload-producer-group
+
+# 打印生成的sql语句
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+minio:
+  endpoint: http://192.168.199.100:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: lease
+
+springdoc:
+  default-flat-param-object: true
+
+logging:
+  level:
+    com.pzj.lease: debug
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/myapp.log  # 日志文件会生成在项目根目录的logs文件夹下

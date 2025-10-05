@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pzj.lease.web.admin.mapper.LeaseTermMapper">
+
+    <select id="getLeaseTermById" resultType="com.pzj.lease.model.entity.LeaseTerm">
+        SELECT lt.id,
+               lt.month_count,
+               lt.unit,
+        FROM room_lease_term rlt
+                 LEFT JOIN lease_term lt
+                           ON lt.is_deleted = 0
+                               AND rlt.lease_term_id = lt.id
+        WHERE rlt.room_id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pzj.lease.web.admin.mapper.PaymentTypeMapper">
+
+    <select id="getPaymentTpyeById" resultType="com.pzj.lease.model.entity.PaymentType">
+        SELECT
+            pt.id,
+            pt.name,
+            pt.pay_month_count,
+            pt.additional_info
+            FROM room_payment_type rpt
+        LEFT JOIN payment_type pt
+        ON pt.is_deleted=0
+        AND pt.id=rpt.payment_type_id
+        WHERE rpt.room_id=#{id}
+    </select>
+</mapper>
